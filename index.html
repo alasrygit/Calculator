@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+    <head>
+        <title>Calculator</title>
+        <script type="text/javascript" src="calculatrice.js"></script>
+        <link rel="stylesheet" media="screen, print, handheld" type="text/css" href="calculatrice.css" />
+    </head>
+    <body>
+        <h2><u>My calculator :</u></h2><br>
+        <table class="calculatrice" id="calc">
+            <tr>
+                <td colspan="4" class="calc_td_resultat">
+                    <input type="text" readonly="readonly" name="calc_resultat" id="calc_resultat" class="calc_resultat" onkeydown="javascript:key_detect_calc('calc',event);" />
+                </td>
+            </tr>
+            <tr>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="CE" onclick="javascript:f_calc('calc','ce');" />
+                </td>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="&larr;" onclick="javascript:f_calc('calc','nbs');" />
+                </td>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="%" onclick="javascript:f_calc('calc','%');" />
+                </td>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="+" onclick="javascript:f_calc('calc','+');" />
+                </td>
+                <td class="calc_td_btn">
+                    <input type="button" class="calc_btn" value="sin" onclick="javascript:f_calc('calc','sin');" />
+                </td>
+                <td class="calc_td_btn">
+                    <input type="button" class="calc_btn" value="ln" onclick="javascript:f_calc('calc','log');" />
+                </td>
+            </tr>
+            <tr>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="7" id="_7"onclick="javascript:add_calc('calc',7);" />
+                </td>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="8" id="_8"onclick="javascript:add_calc('calc',8);" />
+                </td>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="9" id="_9"onclick="javascript:add_calc('calc',9);" />
+                </td>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="-" onclick="javascript:f_calc('calc','-');" />
+                </td>
+                <td class="calc_td_btn">
+                    <input type="button" class="calc_btn" value="  cos  " onclick="javascript:f_calc('calc','cos');" />
+                </td>
+                <td class="calc_td_btn">
+                    <input type="button" class="calc_btn" value="  √  " onclick="javascript:f_calc('calc','sqrt');" />
+                </td>
+            </tr>
+                        <tr>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="4"id="_4" onclick="javascript:add_calc('calc',4);" />
+                </td>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="5"id="_5" onclick="javascript:add_calc('calc',5);" />
+                </td>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="6" id="_6"onclick="javascript:add_calc('calc',6);" />
+                </td>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="x" onclick="javascript:f_calc('calc','*');" />
+                </td>
+                <td class="calc_td_btn">
+                    <input type="button" class="calc_btn" value="  tan  " onclick="javascript:f_calc('calc','tan');" />
+                </td>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="  x!  " onclick="javascript:f_calc('calc','fact');" />
+                    </td>
+            </tr>
+            <tr>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="1" id="_1"onclick="javascript:add_calc('calc',1);" />
+                </td>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="2"id="_2" onclick="javascript:add_calc('calc',2);" />
+                </td>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="3" id="_3"onclick="javascript:add_calc('calc',3);" />
+                </td>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="&divide;" onclick="javascript:f_calc('calc','');" />
+                </td>
+                <td class="calc_td_btn">
+                    <input type="button" class="calc_btn" value="  exp  " onclick="javascript:f_calc('calc','exp');" />
+                </td>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="  log  " onclick="javascript:f_calc('calc','loga');" />
+                    </td>
+            </tr>
+            <tr>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="0" onclick="javascript:add_calc('calc',0);" />
+                </td>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="&plusmn;" onclick="javascript:f_calc('calc','+-');" />
+                </td>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" value="," onclick="javascript:add_calc('calc','.');" />
+                </td>
+                <td class="calc_td_btn">
+                        <input type="button" class="calc_btn" id="egal" value="=" onclick="javascript:f_calc('calc','=');" />
+                </td>
+            </tr>
+        </table>
+        <p id="author">Arthur LASRY</p>
+        <p id="hmw">HW3</p>
+        <script type="text/javascript">
+                document.getElementById('calc').onload=initialiser_calc('calc');
+        </script>
+    </body>
+</html>
